@@ -54,14 +54,14 @@ We can use a script like alfa_set.sh (check the scripts folder), which automatic
 <img src="./images/1.networks_monitor.png" alt="Networks Monitor" width="400"/>
 
 3. Next comes the command "sudo airodump-ng --channel <channel> wlan0", which starts monitoring only the networks on the specified channel.
-<img src="./images/2.current_channel_monitor.png" alt="Networks_on_current_channel" width="400"/>
+<img src="./images/2.current_channel_monitor.png" alt="Networks_on_current_channel" width="600"/>
 
 4. Next comes the command "sudo airodump-ng --bssid <target network MAC address> -c <network channel> wlan0", which starts monitoring only the target network and the devices connected to it.
-<img src="./images/3. current_network_monitor.png" alt="Monitor_current_network" width="400"/>
+<img src="./images/3. current_network_monitor.png" alt="Monitor_current_network" width="600"/>
 
 5. Now we need to capture some traffic. We use the command "sudo airodump-ng --bssid <network mac address> -c <CH> -w capture wlan0" for this.
 Once this command is executed, five files named "capture" with differend extensions will be created, in which the traffic will be saved. The file that interests us for the attack is the one with the .cap extension.
-<img src="./images/4. traffic_capture.png" alt="Traffic_capture" width="400"/>
+<img src="./images/4. traffic_capture.png" alt="Traffic_capture" width="600"/>
 
 6.
 
