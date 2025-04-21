@@ -38,6 +38,14 @@ The key vulnerability of WPA2 is that the 4-way handshake can be intercepted whe
 
 ---
 
+## 📝 Scripts
+
+
+
+
+
+---
+
 ## 🚀 Attack Flow (in a test environment)
 
 1. Scan for available WPA2 Wi-Fi networks
