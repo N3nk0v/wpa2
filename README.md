@@ -50,7 +50,10 @@ Since the vulnerability of WPA2-protected networks has been known for a long tim
 1.Setting up the Alfa card
 We can use a script like alfa_set.sh (check the scripts folder), which automatically detects and configures the Alfa Network card. 
 2.After that, we use the command "sudo airmon-ng start wlan0" to begin monitoring the available networks.
-![Networks Monitor](./images/1.networks_monitor.png)
+<img src="./images/scan_step.png" alt="Scan Example" width="400"/>
+
+
+
 
 
 ---
