@@ -51,7 +51,7 @@ Since the vulnerability of WPA2-protected networks has been known for a long tim
 We can use a script like alfa_set.sh (check the scripts folder), which automatically detects and configures the Alfa Network card. 
 
 2.After that, we use the command "sudo airodump-ng wlan0" to begin monitoring the available networks.
-<img src="./images/1.networks_monitor.png" alt="Networks Monitor" width="400"/>
+<img src="./images/1.networks_monitor.png" alt="Networks Monitor" width="900"/>
 
 3. Next comes the command "sudo airodump-ng --channel <channel> wlan0", which starts monitoring only the networks on the specified channel.
 <img src="./images/2.current_channel_monitor.png" alt="Networks_on_current_channel" width="900"/>
