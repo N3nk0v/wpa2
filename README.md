@@ -6,20 +6,6 @@ This project demonstrates a dictionary attack on WPA2-protected Wi-Fi networks u
 
 ---
 
-## 📁 Contents
-
-- `setup_alfa_monitor_mode.sh` – Bash script to configure a wireless adapter (e.g. Alfa AWUS036NHA) into monitor mode
-- `wpa2_auto_attack.py` – Python script to automate:
-  - Network scanning
-  - Target selection
-  - Deauthentication attack
-  - Capturing the WPA2 handshake
-  - Cracking using a wordlist and `aircrack-ng`
-- In addition, there is a script called dictionary_hash.py, which will pre-hash the wordlist to speed up the dictionary attack.
-
-
----
-
 ## 🧠 How WPA2 Works and Why It's Vulnerable
 
 WPA2 (Wi-Fi Protected Access II) is a security standard for wireless networks that uses encryption to protect data transmitted between devices (clients) and the router (access point). This encryption uses algorithms like AES (Advanced Encryption Standard), providing a high level of security. When a device (such as a laptop or smartphone) connects to the network, a 4-way handshake takes place. This is a process where the device and the router exchange certain packets to verify that both sides are authentic without directly transmitting the password. The password entered when connecting to the network is not sent in plain text. Instead, it's used to generate a key (the Pairwise Master Key - PMK) that is used to encrypt the traffic. The 4-way handshake process is also used to create this key. After a successful 4-way handshake, communication between the device and the router is encrypted using a dynamically generated key. This secures all the data transmitted over the network.
