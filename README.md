@@ -51,7 +51,6 @@ Once this command is executed, five files named "capture" with differend extensi
 <img src="./images/4. traffic_capture.png" alt="Traffic_capture" width="900"/>
 
 6. The moment comes when we need to launch the deauthentication attack. We use the command "sudo aireplay-ng --deauth 50 -a <network mac address> -c <connected device mac address> wlan0". The Alfa card will send 50 packets to the device connected to the access point, specified by its MAC address. This will disconnect the device, and when it attempts to reconnect, we will capture the handshake.
-<img src="./images/6.deautentication_attack.png" alt="deautentication_attack" width="900"/>
 <img src="./images/6.deautentication_attack2.png" alt="deautentication_attack" width="900"/>
 
 7. Once we successfully capture the handshake, we move on to the final step, which is the dictionary attack. We use the command "sudo aircrack-ng -w /home/<path to dictionary>/rockyou.txt -b <network mac address> capture-01.cap", which will initiate a dictionary attack on the capture.cap file where the handshake is stored.
