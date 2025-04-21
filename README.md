@@ -26,7 +26,7 @@ The key vulnerability of WPA2 is that the 4-way handshake can be intercepted whe
 
 ## 📝 Scripts
 
-- [Alfa card set up](./alfa.set.sh)
+- [Alfa card set up](./alfa_set.sh)
 - [wpa2 attack](./wifi_attack_wpa2.sh)
 - [dictionary hash](./dictionary_hash.py)
 
