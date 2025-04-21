@@ -45,9 +45,13 @@ The key vulnerability of WPA2 is that the 4-way handshake can be intercepted whe
 
 ---
 
-## 🖼️ Visuals (optional)
+Since the vulnerability of WPA2-protected networks has been known for a long time, here's a brief overview of how the attack works before we move on to ideas for optimizing and speeding it up.
 
-*You can include screenshots or diagrams in an `/images` folder to better illustrate each step.*
+1.Setting up the Alfa card
+We can use a script like alfa_set.sh (check the scripts folder), which automatically detects and configures the Alfa Network card. 
+2.After that, we use the command "sudo airmon-ng start wlan0" to begin monitoring the available networks.
+![Networks Monitor](./images/1.networks_monitor.png)
+
 
 ---
 
