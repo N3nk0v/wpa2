@@ -30,22 +30,9 @@ The key vulnerability of WPA2 is that the 4-way handshake can be intercepted whe
 - [wpa2 attack](./scripts/wifi_attack_wpa2.sh)
 - [dictionary hash](./scripts/dictionary_hash.py)
 
-
-
 ---
 
-## 🚀 Attack Flow (in a test environment)
-
-1. Scan for available WPA2 Wi-Fi networks
-2. Select a target network (BSSID and channel)
-3. Put the adapter into monitor mode
-4. Deauthenticate a connected client
-5. Capture the WPA2 4-way handshake
-6. Use a wordlist to try cracking the password
-
----
-
-Since the vulnerability of WPA2-protected networks has been known for a long time, here's a brief overview of how the attack works before we move on to ideas for optimizing and speeding it up.
+Since the vulnerability of WPA2-protected networks has been known for a long time, here's a brief overview of how the attack works before we move on to ideas for optimizing and speeding it up. We will use the network that I created specifically for the experiment: !H1dd3n_$!gn@l
 
 1.Setting up the Alfa card
 We can use a script like alfa_set.sh (check the scripts folder), which automatically detects and configures the Alfa Network card. 
@@ -63,10 +50,17 @@ We can use a script like alfa_set.sh (check the scripts folder), which automatic
 Once this command is executed, five files named "capture" with differend extensions will be created, in which the traffic will be saved. The file that interests us for the attack is the one with the .cap extension.
 <img src="./images/4. traffic_capture.png" alt="Traffic_capture" width="900"/>
 
-6.
+6. The moment comes when we need to launch the deauthentication attack. We use the command "sudo aireplay-ng --deauth 50 -a <network mac address> -c <connected device mac address> wlan0". The Alfa card will send 50 packets to the device connected to the access point, specified by its MAC address. This will disconnect the device, and when it attempts to reconnect, we will capture the handshake.
+<img src="./images/6.deautentication_attack.png" alt="deautentication_attack" width="900"/>
+<img src="./images/6.deautentication_attack2.png" alt="deautentication_attack" width="900"/>
 
+7. Once we successfully capture the handshake, we move on to the final step, which is the dictionary attack. We use the command "sudo aircrack-ng -w /home/<path to dictionary>/rockyou.txt -b <network mac address> capture-01.cap", which will initiate a dictionary attack on the capture.cap file where the handshake is stored.
+If the password is found in the dictionary, we will get this output - KEY FOUND - [KEY].
+<img src="./images/7.successfull_dictionary_attack.png" alt="successfull" width="900"/>
+If it is not found in the dictionary, the output will be - KEY NOT FOUND.
+<img src="./images/8.unsuccessful_dictionary_attack.png" alt="unsuccessfull" width="900"/>
 
-
+This is generally how the attack on WPA2-protected networks works. The questions that arise are "How can we speed up the attack?" and "How can we optimize the chances of success?"
 
 
 ---
