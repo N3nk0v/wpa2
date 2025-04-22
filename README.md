@@ -73,9 +73,13 @@ When working with dictionary manipulation, it's a good idea to maintain a collec
 
 ## 🛡️ Methods for Protecting Against WPA2 Attacks
 There are various methods by which we can protect ourselves from attacks against WPA2. Naturally, the ways to secure our networks differ slightly depending on whether we’re using a smartphone hotspot for internet access in public places, for example, or a home network where we typically use a router that broadcasts the network signal. But generally speaking, the most significant improvement in network security comes from choosing a strong and complex password, and opting for WPA3 instead of WPA2.
+
 WPA3 is a newer standard than WPA2, and although some vulnerabilities have already been discovered in it, it remains significantly more secure than its predecessor. It offers protection against deauthentication and dictionary attacks.
+
 As for choosing a strong and complex password — this is always a good approach, regardless of whether we're talking about securing a network, an account, a website, a blog, or any other type of system. As we saw with dictionary attacks, dictionaries can contain massive numbers of passwords, some generated and others leaked from old databases. Therefore, when selecting a password, it’s wise for users to come up with one that is long and complex — containing letters, numbers, and special characters — in order to make it as difficult as possible for an attacker and their dictionary.
+
 Of course, there are other protection measures against WPA2 vulnerabilities, such as disabling automatic probe requests, enabling MAC address filtering, turning off WPS, hiding the SSID (network name), or limiting the number of connected devices. These are also forms of protection, but in my opinion, choosing a more secure network protocol and using a strong password are by far the most reliable and secure methods.
+
 ---
 
 ## 📝 License
